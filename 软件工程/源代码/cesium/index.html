@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0,
+         maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CUG-Cesium</title>
+  <script src="./Build/CesiumUnminified/Cesium.js"></script>
+  <script src="./Apps/Sandcastle/Sandcastle-header.js"></script>
+  <script src="src/js/jquery.min.js"></script>
+  <link rel="stylesheet" href="src/css/index.css">
+</head>
+<body>
+<div id="cesiumContainer"></div>
+<div id="mouseMove"></div>
+<button id="manage">菜单</button>
+<div id="graphTree">
+  <ul>
+    <li>
+      <button id="btn1">Sentinel</button>
+    </li>
+    <li>
+      <button id="btn2">地形图层</button>
+    </li>
+    <li>
+      <button id="btn3">地理网格</button>
+    </li>
+    <li>
+      <button id="btn4">美国州图</button>
+    </li>
+    <li>
+      <button id="btn5">纽约建筑</button>
+    </li>
+    <li>
+      <button id="btn6">相机控制</button>
+    </li>
+    <li>
+      <button id="btn7">太阳光照</button>
+    </li>
+    <li>
+      <button id="btn8">深度检测</button>
+    </li>
+    <li>
+      <button id="btn9">飞机航行</button>
+    </li>
+    <li>
+      <button id="btn10">添加标注</button>
+    </li>
+  </ul>
+</div>
+<div id="camera_input">
+  <ul>
+    <li>
+      <span>经度：</span>
+      <input type="text" id="camera_input1" placeholder="-73.998">
+      <span style="position: absolute;right: -11px">°</span>
+    </li>
+    <li>
+      <span>纬度：</span>
+      <input type="text" id="camera_input2" placeholder="40.774">
+      <span style="position: absolute;right: -11px">°</span>
+    </li>
+    <li>
+      <span>高度：</span>
+      <input type="text" id="camera_input3">
+      <span style="position: absolute;right: -20px">m</span>
+    </li>
+  </ul>
+  <button id="btn_fly">移动相机</button>
+</div>
+<div id="label_input">
+  <ul id="label_input_ul1">
+    <li>
+      <input type="text" id="label_input1">
+    </li>
+    <li>
+      <input type="text" id="label_input2">
+    </li>
+    <li>
+      <input type="text" id="label_input3">
+    </li>
+    <li>
+      <input type="text" id="label_input4">
+    </li>
+  </ul>
+  <ul id="label_input_ul2">
+    <li>标签符号：</li>
+    <li>标签大小：</li>
+    <li>文字内容：</li>
+    <li>文字大小：</li>
+  </ul>
+  <button id="btn_label">开始标记</button>
+</div>
+<div id="toolbar">
+  <div id="interpolationMenu"></div>
+</div>
+
+<script type="module" src="src/js/graph.js"></script>
+<script type="module" src="src/js/building.js"></script>
+<script type="module" src="src/js/camera.js"></script>
+<script type="module" src="src/js/grid.js"></script>
+<script type="module" src="src/js/button.js"></script>
+<script type="module" src="src/js/mouseMove.js"></script>
+<script type="module" src="src/js/label.js"></script>
+<script type="module" src="src/js/plane.js"></script>
+</body>
+</html>
